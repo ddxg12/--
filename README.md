@@ -2,7 +2,7 @@
 
 # 2025.03.20 2주차  
 
-### React Project의 구조 및 역할  
+### React Project의 구조 및 역할 tes 
 - node_modules/  
 - public/ : 정적(static) 파일을 저장하는 폴더로, 빌드 시 그대로 유지됨.  
     - favicon.ko : 라우저 탭에 표시되는 아이콘  
