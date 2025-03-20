@@ -2,6 +2,41 @@
 
 # 2025.03.20 2주차  
 
+### React Project의 구조 및 역할  
+- node_modules/  
+- public/ : 정적(static) 파일을 저장하는 폴더로, 빌드 시 그대로 유지됨.  
+    - favicon.ko : 라우저 탭에 표시되는 아이콘  
+    - index.html : React 앱이 마운트되는  HTML 파일 <$div.id="root"><$div>가 포함되어 있음.  
+    - logo192.png : PWA(progressive wep app)용 아이콘.  
+    - logo512.png : PWA(progressive wep app)용 아이콘.  
+    - manifest.json: PWA 관련 설정 파일.  
+    - robots.txt : 검색 엔진 크롤러의 접근을 제어하는 파일  
+- src : React 앱의 주요 코드가 위치하는 폴더  
+    - APP.css : App.js에 적용되는 스타일  
+    - App.js : 메인 컴포넌트  
+    - App.test.js : jest를 사용한 기본 테스트 파일  
+    - index.js : react 앱의 진입점(entry point) - ReactDom.createRoot를 사용하며 App.js를 렌더링함.  
+    - logo.svg : 기본 로고 이미지.  
+    - reportWebVitals.js : 성능 측정 관련 코드(선택 사항)  
+    - setupTests.js : 테스트 환경 설정 파일  
+- gitignore : Git에 추가하지 않을 파일 목록을 정의  
+- package-lock.json: 설치된 패키지의 정확한 버전이 기록된 파일.  
+- package.json : 프로젝트의 의존성 목록과 실행 스크립트가 포함된 파일  
+- README.md : 프로젝트 설명 문서  
+
+- src/  
+    - react 프로젝트의 주요 코드가 위치하는 디렉토리  
+    - 개발함변서 대부분의 작업이 이루어지는 곳
+- src/App.js  
+    - 메인 component 로 필요한 sub component를 모아서 관리  
+    - 출력을 위해서 index.js로 전달  
+- src/App.css  
+    - app.js에 적용되는 스타일을 정의하는 스타일 파일  
+- src/index.js  
+    - react 앱의 진입 점(entry point)으로 최종 렌더링의 되는 곳  
+    - reactDom.createRoot를 사용하며 App.js를 렌더링  
+- src/index.css  
+    - 전역 스타일을 정의하는 스타일 파일  
 # 2025.03.13 1주차
 
 ### 깃허브 와 vscode 연동  
