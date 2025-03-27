@@ -1,9 +1,82 @@
 # 202130235 최한솔  
 
+# 2025.03.27 3주차 
+
+### 데이터 표시하기  
+- JSX를 사용하면 자바스크립트에 마크업을 넣을 수 있음  - JSX 코드 내에서 JAVASCRIPT로 '탈출'하여 변수나 표현식을 사용하는 것  
+- 이 방법을 'ESCAPE BACK' 이라고 함  
+- {} 중괄호를 사용해서 변수나 표현식을 사용자에게 표시하도록 하는 것  
+- SCR 속성에 변수의 값을 전달하여 이미지의 경로설정 가능   
+
+### 스타일 추가하기  
+- react 에서는 className으로 css클래스를 지정합니다.  
+- className은 HTML의 class속성과 동일한 방식으로 동작  
+- css규칙은 별도의 css 파일에 작성. 그러나 css파일을 추가하는 방법을 규정하지는 않음.  
+- 가장간단한 방법은 html에 링크 태그를 추가하는 것  
+
+### JSX로 마크업 작성하기  
+- 앞에서 작성한 코드의 마크업 문법을 JSX라고 함  
+- 반드시 사용해야 하는 것은 아니지만, REACT프로젝트에서는 편의성을 위해 JSX를 사용함.  
+- JSX는 HTML보다 더욱 엄격한 문법을 적용  
+- JSX에서는 싱글 태그라도 태그를 닫아야함  
+- react에서는 여러 개의 component를 jsx 태그로 반환 할 수 있음  
+- 다만 여러 개의 component를 wrapping 해주어야 함
+
+### react 실행을 위한 코드작성    
+#### App.js
+- import MyButton from "./MyButton"
+import { Button1, Button3 } from "./Buttonlib"
+
+export default function App() {
+  return (
+    <div>
+    <h1>Hello React</h1>
+    <MyButton />
+    <Button1 />
+    <Button3 />
+    </div>
+  )
+}
+####  Buttonlib.js
+- function Button1() {
+    return (
+        <button>Button1</button>
+    )
+}
+function Button2() {
+    return (
+        <button>Button2</button>
+    )
+}
+function Button3() {
+    return (
+        <button>Button3</button>
+    )
+}
+
+export { Button1, Button2, Button3}
+
+### component의 생성 및 nesting(중첩)  
+- 고유한 로직과 모양을 가진 ui의 일부  
+- 버튼처럼 작을 수도 있고, 전체 페이지처럼 클 수도 있음  
+- 마크업을 반환하는 javascript의 함수  
+
+- nesting은 css선택자의 중첩 구조를 생각하면 쉽게 이해할 수 있음.  
+
+### export default and export 차이   
+- Named Exports (export)  
+    - 하나의 파일 안에 여러 개의 component가 있을 때 사용.  
+    - component 를 사용하는 쪽에서는 component 정확한 이름 반드시 명시  
+    - (ex) import ( add, subtract, multiply, divide) from'./math/  
+- Default Exports  
+    - 하나의 파일 안에서 하나의 component 만 내보내는 경우 사용  
+    - component를 사용하는 쪽에서는 어떤 이름을 사용해도 상관없음  
+
 # 2025.03.20 2주차  
 
 ### react  
 - react에서 제일 중요한 단어 component  
+
 ### 의존성 관리와 package.json  
 - 의존성을 관리하는 이유  
     - 손쉬운 설치 및 업데이트  
