@@ -23,20 +23,6 @@
 - 다만 여러 개의 component를 wrapping 해주어야 함
 
 ### react 실행을 위한 코드작성    
-#### App.js
-- import MyButton from "./MyButton"
-import { Button1, Button3 } from "./Buttonlib"
-
-export default function App() {
-  return (
-    <div>
-    <h1>Hello React</h1>
-    <MyButton />
-    <Button1 />
-    <Button3 />
-    </div>
-  )
-}
 ####  Buttonlib.js
 - function Button1() {
     return (
