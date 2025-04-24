@@ -1,9 +1,12 @@
+import React from "react";
+import midterm from './midterm';
 
 function App() {
   return (
-    <div>
-      <h1></h1>
-    </div>
-  );
+    <midterm>
+
+    </midterm>
+  )
 }
+
 export default App;
